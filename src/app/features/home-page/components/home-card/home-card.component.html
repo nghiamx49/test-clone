@@ -1,0 +1,10 @@
+<h3>{{ title }}</h3>
+<div class="item-container">
+  @for(item of list; track $index) {
+    <div class="item">
+      <img [src]="item.imageLink" [alt]="item.title">
+      <span>{{ item.title }}</span>
+    </div>
+  }
+</div>
+<span class="link">{{ linkTitle }}</span>

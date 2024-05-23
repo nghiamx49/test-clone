@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'palette';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: 24px;
+  color: variables.$primary;
+}
+
+.h3 {
+  margin: 0;
+  font-weight: 900;
+  color: variables.$primary;
+}
+
+.link {
+  color: #007185;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.item-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.item {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+:host:is(.normal) {
+  .item {
+    width: 45%;
+  }
+}
+
+:host:is(.single) {
+  .item {
+    width: 100%;
+  }
+}
+
+:host:is(.first-large) {
+  .item:first-child {
+    width: 100%;
+  }
+
+  .item:not(:first-child) {
+    width: 30%;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="link-container">
+  @for (link of footerList; track $index) {
+    <div class="link-item">
+      <span class="primary" [innerHTML]="link.primaryText"></span>
+      <span [innerHTML]="link.secondaryText"></span>
+    </div>
+  }
+</div>
+
+<div class="information">
+  <div class="link-wrapper">
+    <div class="link-item">
+      <span class="info-link">Conditions of Use</span>
+    </div>
+    <div class="link-item">
+      <span class="info-link">Privacy Notice</span>
+    </div>
+    <div class="link-item">
+      <span class="info-link">Consumer Health Data Privacy Disclosure</span>
+    </div>
+    <div class="link-item">
+      <span class="info-link">Your Ads Privacy Choices</span>
+    </div>
+  </div>
+  <div class="copyright">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
+</div>

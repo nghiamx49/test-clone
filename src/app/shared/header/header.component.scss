@@ -1,0 +1,108 @@
+@use 'variables';
+@use 'palette';
+
+:host {
+  display: block;
+}
+
+.primary-header {
+  display: flex;
+  padding: 8px 12px;
+  background-color: variables.$primary;
+  width: 100%;
+  min-height: 60px;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.search-container {
+  position: relative;
+  width: 815px;
+  display: flex;
+  border-radius: 6px;
+
+  select, input {
+    border: none;
+    outline: none;
+  }
+
+  select {
+    border-right: 1px solid palette.$black-40;
+    padding: 0 10px;
+    border-radius:  4px 0 0 4px;
+  }
+
+  input {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background-color: variables.$territory;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  i, .count {
+    font-size: 40px;
+  }
+
+  .count {
+    color: variables.$territory;
+  }
+}
+
+.secondary-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0 7px;
+  background-color: variables.$secondary;
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 9px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid #ffffff;
+    }
+  }
+}
